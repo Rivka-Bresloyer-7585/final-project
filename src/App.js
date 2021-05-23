@@ -3,6 +3,9 @@ import './App.css';
 import HomePage from './components/homePage.js';
 import FamiliarUser from './components/familiarUser.js';
 import Registration from './components/registration.js';
+import ByCategory from './components/search/byCategory';
+import ByProducts from './components/search/byProducts';
+import ByRecipes from './components/search/byRecipes';
 
 import {
   BrowserRouter as Router,
@@ -16,6 +19,15 @@ function App() {
       <Router>
         <div>
           <Switch>
+            <Route path="/search/byRecipes">
+              <ByRecipes />
+            </Route>
+            <Route path="/search/byProducts">
+              <ByProducts />
+            </Route>
+            <Route path="/search/byCategory">
+              <ByCategory />
+            </Route>
             <Route path="/familiarUser">
               <FamiliarUser />
             </Route>

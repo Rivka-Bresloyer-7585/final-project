@@ -2,22 +2,31 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
+import { useHistory } from "react-router-dom";
 
 const images = [
   {
-    url: '/static/images/grid-list/breakfast.jpg',
-    title: 'Breakfast',
-    width: '40%',
+    id:1,
+    url: '',
+    title: 'חיפוש לפי שם מתכון',
+    width: '33.33333%',
+    searchUrl: '/search/byRecipes'
   },
   {
-    url: '/static/images/grid-list/burgers.jpg',
-    title: 'Burgers',
-    width: '30%',
+    id:2,
+    url: '',
+    title: 'חיפוש לפי קטגוריה',
+    width: '33.33333%',
+    searchUrl: '/search/byCategory'
+
   },
   {
-    url: '/static/images/grid-list/camera.jpg',
-    title: 'Camera',
-    width: '30%',
+    id:3,
+    url: '',
+    title: 'חיפוש לפי מוצרים',
+    width: '33.33333%',
+    searchUrl: '/search/byProducts'
+
   },
 ];
 
@@ -97,10 +106,17 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonBases() {
   const classes = useStyles();
 
+  let history = useHistory();
+
+  const byCategory = (searchUrl) => {
+      history.push(searchUrl);
+  }
+
   return (
     <div className={classes.root}>
       {images.map((image) => (
         <ButtonBase
+         onClick={() => byCategory(image.searchUrl)}
           focusRipple
           key={image.title}
           className={classes.image}

@@ -1,9 +1,12 @@
 import React from 'react';
+import RecipesInputs from './recipesInputs'
 
 const ByRecipes = () => {
     return (
         <div>
-            byRecipes
+            <label>הכנס שם מתכון</label>
+           <RecipesInputs/>
+
         </div>
     )
 }

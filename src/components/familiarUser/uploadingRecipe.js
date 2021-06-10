@@ -1,10 +1,11 @@
 import React from 'react';
+import TextField from './textField'
 
 
 const UploadingRecipe=()=>{
 
     return (
-        <div>UploadingRecipe</div>
+        <TextField/>
     )
 }
 

@@ -6,6 +6,10 @@ import Registration from './components/registration.js';
 import ByCategory from './components/search/byCategory';
 import ByProducts from './components/search/byProducts';
 import ByRecipes from './components/search/byRecipes';
+import UploadingRecipe from './components/familiarUser/uploadingRecipe';
+import HomePageFamiliarUser from './components/familiarUser/homePage';
+
+
 
 import {
   BrowserRouter as Router,
@@ -36,6 +40,12 @@ function App() {
             </Route>
             <Route path="/">
               <HomePage />
+            </Route>
+            <Route path="/familiarUser/uploadingRecipe">
+              <UploadingRecipe />
+            </Route>
+            <Route path="/familiarUser/homePage">
+              <HomePageFamiliarUser />
             </Route>
           </Switch>
         </div>

@@ -55,21 +55,22 @@ export default function SignIn() {
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
-
+  let history = useHistory();
   function handleSubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
   }
 
   const classes = useStyles();
-  let history = useHistory();
 
   const registration = () => {
     history.push("/registration");
   }
-  
-  
+
+  // const login = () => {
+  //   history.push("/familiarUser/homePage");
+  // }
   return (
-    <Container onSubmit={()=>handleSubmit()} component="main" maxWidth="xs">
+    <Container onSubmit={() => handleSubmit()} component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -117,11 +118,12 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
             disabled={!validateForm()}
-        
+            // onClick={login}
+
           >
             Sign In
           </Button>
-         
+
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">

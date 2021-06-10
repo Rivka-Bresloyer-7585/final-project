@@ -7,7 +7,7 @@ import ByCategory from './components/search/byCategory';
 import ByProducts from './components/search/byProducts';
 import ByRecipes from './components/search/byRecipes';
 import UploadingRecipe from './components/familiarUser/uploadingRecipe';
-import HomePageFamiliarUser from './components/familiarUser/homePage';
+import HomePageFamiliarUser from './components/familiarUser/homePage.js';
 
 
 

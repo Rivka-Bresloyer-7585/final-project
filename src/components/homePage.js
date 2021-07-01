@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonBase from './buttonBases.js'
 import { Button } from '@material-ui/core';
 import { useHistory } from "react-router-dom";
+import "./homePage.css";
 
 const HomePage = () => {
 
@@ -16,11 +17,11 @@ const HomePage = () => {
             <div>
                 <label>!!כאן תוכלו להרכיב את הארוחה המתאימה לכם ביותר</label>
             </div>
+            <ButtonBase className="buttonBase" />
 
-            <Button onClick={login} variant="contained" color="primary">
+            <Button className="familiarUser" onClick={login} variant="contained" color="primary">
                 כניסה כמשתמש מוכר
             </Button>
-            <ButtonBase />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,6 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useHistory } from "react-router-dom";
+
+
+
+
 
 function Copyright() {
   return (
@@ -48,12 +52,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
+
   const classes = useStyles();
   let history = useHistory();
 
   const familiarUser = () => {
     history.push("/familiarUser");
   }
+
+  // useEffect(() => {
+  //   fetch(`http://localhost:3000/signup?user=${}?password=${passwordInput}`)
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data))
+  //     .catch((err) => {
+  //       console.log("error", err);
+  //     });
+  // }, []);
+
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -124,8 +139,7 @@ export default function SignUp() {
             fullWidth
             variant="contained"
             color="primary"
-            className={classes.submit}
-          >
+            className={classes.submit}          >
             Sign Up
           </Button>
           <Grid container justify="flex-end">

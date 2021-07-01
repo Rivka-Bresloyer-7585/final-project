@@ -10,14 +10,14 @@ const images = [
     url: '',
     title: 'חיפוש לפי שם מתכון',
     width: '33.33333%',
-    searchUrl: '/search/byRecipes'
+    searchUrl: '/search/byRecipes/byRecipes'
   },
   {
     id:2,
     url: '',
     title: 'חיפוש לפי קטגוריה',
     width: '33.33333%',
-    searchUrl: '/search/byCategory'
+    searchUrl: '/search/byCategory/byCategory'
 
   },
   {
@@ -25,7 +25,7 @@ const images = [
     url: '',
     title: 'חיפוש לפי מוצרים',
     width: '33.33333%',
-    searchUrl: '/search/byProducts'
+    searchUrl: '/search/byProducts/byProducts'
 
   },
 ];

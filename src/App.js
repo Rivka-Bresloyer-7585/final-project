@@ -3,11 +3,10 @@ import './App.css';
 import HomePage from './components/homePage.js';
 import FamiliarUser from './components/familiarUser.js';
 import Registration from './components/registration.js';
-import ByCategory from './components/search/byCategory';
-import ByProducts from './components/search/byProducts';
-import ByRecipes from './components/search/byRecipes';
+import ByCategory from './components/search/byCategory/byCategory.js';
+import ByProducts from './components/search/byProduct/byProducts.js';
+import ByRecipes from './components/search/byRecipes/byRecipes.js';
 import UploadingRecipe from './components/familiarUser/uploadingRecipe';
-import HomePageFamiliarUser from './components/familiarUser/homePage.js';
 
 
 
@@ -18,6 +17,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const token=localStorage.getItem("token");
   return (
     <div>
       <Router>
@@ -43,9 +43,6 @@ function App() {
             </Route>
             <Route path="/familiarUser/uploadingRecipe">
               <UploadingRecipe />
-            </Route>
-            <Route path="/familiarUser/homePage">
-              <HomePageFamiliarUser />
             </Route>
           </Switch>
         </div>
